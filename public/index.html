@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>📚 Student Records</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📚 Student Records</h1>
+            <p>Manage your student database with ease</p>
+        </header>
+
+        <section class="form-section">
+            <h2>Add New Student</h2>
+            <form id="studentForm">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="firstName">First Name *</label>
+                        <input type="text" id="firstName" placeholder="John" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name *</label>
+                        <input type="text" id="lastName" placeholder="Doe" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" placeholder="john@example.com" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Age *</label>
+                        <input type="number" id="age" placeholder="18" min="5" max="100" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="grade">Grade *</label>
+                        <select id="grade" required>
+                            <option value="">Select Grade</option>
+                            <option value="1st">1st Grade</option>
+                            <option value="2nd">2nd Grade</option>
+                            <option value="3rd">3rd Grade</option>
+                            <option value="4th">4th Grade</option>
+                            <option value="5th">5th Grade</option>
+                            <option value="6th">6th Grade</option>
+                            <option value="7th">7th Grade</option>
+                            <option value="8th">8th Grade</option>
+                            <option value="9th">9th Grade</option>
+                            <option value="10th">10th Grade</option>
+                            <option value="11th">11th Grade</option>
+                            <option value="12th">12th Grade</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="subjects">Subjects (comma separated)</label>
+                        <input type="text" id="subjects" placeholder="Math, Science, English" />
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Add Student</button>
+            </form>
+            <div id="formMessage" class="message"></div>
+        </section>
+
+        <section class="list-section">
+            <h2>All Students</h2>
+            <div id="loading">Loading students...</div>
+            <div id="studentList"></div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
