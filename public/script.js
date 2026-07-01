@@ -1,6 +1,5 @@
 // API Base URL
-const API_URL = 'http://localhost:5000/api/students';
-
+const API_URL = 'https://student-api-mysql-production.up.railway.app/api/students';
 // DOM Elements
 const studentForm = document.getElementById('studentForm');
 const studentList = document.getElementById('studentList');
